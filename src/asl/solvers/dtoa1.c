@@ -108,13 +108,12 @@ dtoamalloc(size_t x)
 
 #ifdef __cplusplus
 extern "C" {
-
+#endif
 extern char *ecvt(double value, int ndigit, int *decpt, int *sign);
 extern char *fcvt(double value, int ndigit, int *decpt, int *sign);
 
  char *
 dtoa(double d, int mode, int ndigits, int *decpt, int *sign, char **rve)
-#endif
 {
 	char *s, *s1;
 
@@ -143,9 +142,9 @@ dtoa(double d, int mode, int ndigits, int *decpt, int *sign, char **rve)
 		*rve = s1;
 	return s;
 	}
-#endif
 #ifdef __cplusplus
 }
+#endif
 #endif /*}}*/
 /* 20070913:  dtoa.c INFNAN_CHECK := default */
 /* 20160307:  sync with /netlib/fp */
